@@ -1,9 +1,9 @@
 var btn = document.getElementById("button");
 var affichageResult = document.getElementById("affichageResult");
 btn.onclick = function(){
-    var start = document.getElementById("start").value;
-    var end = document.getElementById("end").value;
-    var ilayNombre = document.getElementById("ilayNombre").value;
+    var start = parseInt(document.getElementById("start").value);
+    var end = parseInt(document.getElementById("end").value);
+    var ilayNombre = parseInt(document.getElementById("ilayNombre").value);
     affichageResult.innerText = ' ';
     affichageResult.style.backgroundColor = "rgba(128, 128, 128, 0.637)";
     affichageResult.style.width = "80%";
@@ -15,7 +15,7 @@ btn.onclick = function(){
     affichageResult.innerText = "ireo nombre divisible par"+" "+ilayNombre+" "+"dia\n";
     for(var i = start; i <= end; i++){
         if(i%ilayNombre==0){
-            affichageResult.innerText = affichageResult.innerText + i + "\n";
+            affichageResult.innerText += i + "\n";
         }
         } 
 }
